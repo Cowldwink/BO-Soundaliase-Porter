@@ -1,305 +1,444 @@
+$sT5SndAHeaders# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+#   Parameters
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
-#   Initalise Data
-# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
-
-$oT5SndAliase = [PSCustomObject][ordered]@{
-    "name" = "INSERT"
-    "file" = "INSERT"
-    "template" = $null
-    "loadspec" = $null
-    "secondary" = "INSERT"
-    "group" = "INSERT"
-    "vol_min" = "INSERT"
-    "vol_max" = "INSERT"
-    "team_vol_mod" = 100
-    "dist_min" = "INSERT"
-    "dist_max" = "INSERT"
-    "dist_reverb_max" = "INSERT"
-    "volume_falloff_curve" = "INSERT"
-    "reverb_falloff_curve" = "INSERT"
-    "volume_min_falloff_curve" = "INSERT"
-    "reverb_min_falloff_curve" = "INSERT"
-    "limit_count" = "INSERT"
-    "limit_type" = "INSERT"
-    "entity_limit_count" = "INSERT"
-    "entity_limit_type" = "INSERT"
-    "pitch_min" = "INSERT"
-    "pitch_max" = "INSERT"
-    "team_pitch_mod" = 0
-    "min_priority" = "INSERT"
-    "max_priority" = "INSERT"
-    "min_priority_threshold" = "INSERT"
-    "max_priority_threshold" = "INSERT"
-    "spatialized" = "INSERT"
-    "type" = "INSERT"
-    "loop" = "INSERT"
-    "randomize_type" = $null
-    "probability" = "INSERT"
-    "start_delay" = "INSERT"
-    "reverb_send" = "INSERT"
-    "duck" = $null
-    "pan" = "INSERT"
-    "center_send" = "INSERT"
-    "envelop_min" = "INSERT"
-    "envelop_max" = "INSERT"
-    "envelop_percentage" = "INSERT"
-    "occlusion_level" = "INSERT"
-    "occlusion_wet_dry" = "INSERT"
-    "is_big" = "INSERT"
-    "distance_lpf" = "INSERT"
-    "move_type" = "INSERT"
-    "move_time" = "INSERT"
-    "real_delay" = "no"
-    "subtitle" = "INSERT"
-    "mature" = "both"
-    "doppler" = "INSERT"
-    "futz" = "no"
-    "context_type" = $null
-    "context_value" = $null
-    "compression" = $null
-    "timescale" = "INSERT"
-    "music" = "INSERT"
-    "fade_in" = "INSERT"
-    "fade_out" = "INSERT"
-    "pc_format" = $null
-    "pause" = "INSERT"
-    "stop_on_death" = "INSERT"
-    "bus" = "INSERT"
-    "snapshot" = "INSERT"
-    "voice_limit" = "INSERT"
-    "file_xenon" = $null
-    "file_size_xenon" = 0
-    "file_ps3" = $null
-    "file_size_ps3" = 0
-    "file_pc" = "INSERT"
-    "file_size_pc" = 0
-    "file_wii" = $null
-    "file_size_wii" = 0
-    "source_csv" = $null
-    "language" = "all"
-}
-
-$hT6T5VolumeGroupMap = @{
-    grp_reference       = "reference"
-    grp_master          = "master"
-    grp_wpn_lfe         = "effects"
-    grp_lfe             = "effects"
-    grp_hdrfx           = "effects"
-    grp_music           = "music"
-    grp_voice           = "voice"
-    grp_set_piece       = "master"
-    grp_igc             = "master"
-    grp_mp_game         = "event"
-    grp_explosion       = "explosion"
-    grp_player_impacts  = "foley"
-    grp_scripted_moment = "event"
-    grp_menu            = "ui"
-    grp_whizby          = "effects"
-    grp_weapon          = "foley"
-    grp_vehicle         = "vehicle"
-    grp_impacts         = "foley"
-    grp_foley           = "foley"
-    grp_destructible    = "destructable"
-    grp_ambience        = "ambience"
-    grp_alerts          = "effects"
-    grp_air             = "ambience"
-    grp_bink            = "ui"
-    grp_announcer       = "voice_announcer"
-}
-
-$hT6T5CurveMap = @{
-    default     = "default"
-    defaultmin  = "defaultmin"
-    allon       = "allon"
-    alloff      = "alloff"
-    sin         = "sin"
-    cos         = "cos"
-    rcurve0     = "rcurve0"
-    rcurve1     = "rcurve1"
-    rcurve2     = "rcurve2"
-    rcurve3     = "rcurve3"
-    rcurve4     = "rcurve4"
-    rcurve5     = "rcurve5"
-    steep       = "curve5"
-    sindelay    = "sin"
-    cosdelay    = "cos"
-    rev60       = "rcurve2"
-    rev65       = "rcurve2"
-}
-
-$hT6T5PanMap = @{
-    default                    = "default"
-    music                      = "music"
-    wpn_all                    = "wpn_all"
-    wpn_fnt                    = "wpn_fnt"
-    wpn_rear                   = "wpn_rear"
-    wpn_left                   = "wpn_left"
-    wpn_right                  = "wpn_right"
-    music_all                  = "music_all"
-    fly_foot_all               = "fly_foot_all"
-    front                      = "front"
-    back                       = "back"
-    front_mostly               = "front_mostly"
-    back_mostly                = "back_mostly"
-    all                        = "all"
-    center                     = "center"
-    front_and_center           = "front_and_center"
-    lfe                        = "lfe"
-    quad                       = "quad"
-    front_mostly_some_center   = "front_mostly_some_center"
-    front_halfback             = "front_halfback"
-    halffront_back             = "halffront_back"
-    test                       = "test"
-    brass_right                = "wpn_right"
-    brass_left                 = "wpn_left"
-    veh_back                   = "back"
-    tst_left                   = "wpn_left"
-    tst_center                 = "center"
-    tst_right                  = "wpn_right"
-    tst_surround_left          = "back"
-    tst_surround_right         = "back"
-    tst_lfe                    = "lfe"
-    pip                        = "front_mostly"
-    movie_vo                   = "front_and_center"
-}
-
-$aT5ContextTypes = @(
-    "ringoff_plr",
-    "mature",
-    "test",
-    "hazmat"
-)
-
-$aT5ContextValues = @(
-    "indoor",
-    "outdoor",
-    "explicit",
-    "safe",
-    "high",
-    "low",
-    "mask"
-)
-
-$hT6T5DuckGroupMap = @{
-    snp_alerts_gameplay = "master"
-    snp_ambience        = "ambience"
-    snp_claw            = "effects"
-    snp_destructible    = "physics"
-    snp_dying           = "underwater"
-    snp_dying_ice       = "underwater"
-    snp_evt_2d          = "special_event_2"
-    snp_explosion       = "explosion"
-    snp_foley           = "foley"
-    snp_grenade         = "explosion"
-    snp_hdrfx           = "effects"
-    snp_igc             = "master"
-    snp_impacts         = "foley"
-    snp_menu            = "ui"
-    snp_movie           = "special_event"
-    snp_music           = "music"
-    snp_never_duck      = "event_gun_duck"
-    snp_player_dead     = "voice_player_hurt"
-    snp_player_impacts  = "foley"
-    snp_scripted_moment = "foley"
-    snp_set_piece       = "foley"
-    snp_special         = "master"
-    snp_vehicle         = "vehicle"
-    snp_vehicle_interior= "veh_interior"
-    snp_voice           = "voice"
-    snp_weapon_decay_1p = "effects"
-    snp_whizby          = "effects"
-    snp_wpn_1p          = "wpn_plr"
-    snp_wpn_3p          = "wpn_npc"
-    snp_wpn_turret      = "wpn_3p_turret"
-    snp_x2              = "master"
-    snp_x3              = "master"
-}
-
-$sT6SndAliaseRecord = Read-Host "Hi! I am dumb. Please don't have mistakes in your T6's soundaliase record.`nAnyway enter your T6 soundaliase record here"
-$oT6SndAliase = $sT6SndAliaseRecord | ConvertFrom-Csv -Header @("Name", "FileSource", "Secondary", "Storage", "Bus", "VolumeGroup", "DuckGroup", "Duck", "ReverbSend", "CenterSend", "VolMin", "VolMax", "DistMin", "DistMaxDry", "DistMaxWet", "DryMinCurve", "DryMaxCurve", "WetMinCurve", "WetMaxCurve", "LimitCount", "EntityLimitCount", "LimitType", "EntityLimitType", "PitchMin", "PitchMax", "PriorityMin", "PriorityMax", "PriorityThresholdMin", "PriorityThresholdMax", "PanType", "Pan", "Looping", "RandomizeType", "Probability", "StartDelay", "EnvelopMin", "EnvelopMax", "EnvelopPercent", "OcclusionLevel", "IsBig", "DistanceLpf", "FluxType", "FluxTime", "Subtitle", "Doppler", "ContextType", "ContextValue", "Timescale", "IsMusic", "IsCinematic", "FadeIn", "FadeOut", "Pauseable", "StopOnEntDeath", "StopOnPlay", "DopplerScale", "FutzPatch", "VoiceLimit", "IgnoreMaxDist", "NeverPlayTwice")
 
 
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
-#   Convert Data
+#   Environtment Variables
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
 
-$oT5SndAliase.name                      = $oT6SndAliase.Name
-$oT5SndAliase.file                      = $oT6SndAliase.FileSource
-# $oT5SndAliase.template                = $null
-# $oT5SndAliase.loadspec                = $null
-$oT5SndAliase.secondary                 = $oT6SndAliase.Secondary
-$oT5SndAliase.group                     = $hT6T5VolumeGroupMap[$oT6SndAliase.VolumeGroup]
-$oT5SndAliase.vol_min                   = $oT6SndAliase.VolMin
-$oT5SndAliase.vol_max                   = $oT6SndAliase.VolMax
-# $oT5SndAliase.team_vol_mod            = 100
-$oT5SndAliase.dist_min                  = $oT6SndAliase.DistMin
-$oT5SndAliase.dist_max                  = $oT6SndAliase.DistMaxDry
-$oT5SndAliase.dist_reverb_max           = $oT6SndAliase.DistMaxWet
-$oT5SndAliase.volume_falloff_curve      = $hT6T5CurveMap[$oT6SndAliase.DryMaxCurve]
-$oT5SndAliase.reverb_falloff_curve      = $hT6T5CurveMap[$oT6SndAliase.WetMaxCurve]
-$oT5SndAliase.volume_min_falloff_curve  = $hT6T5CurveMap[$oT6SndAliase.DryMinCurve]
-$oT5SndAliase.reverb_min_falloff_curve  = $hT6T5CurveMap[$oT6SndAliase.WetMinCurve]
-$oT5SndAliase.limit_count               = $oT6SndAliase.LimitCount
-$oT5SndAliase.limit_type                = $oT6SndAliase.LimitType
-$oT5SndAliase.entity_limit_count        = $oT6SndAliase.EntityLimitCount
-$oT5SndAliase.entity_limit_type         = $oT6SndAliase.EntityLimitType
-$oT5SndAliase.pitch_min                 = $oT6SndAliase.PitchMin
-$oT5SndAliase.pitch_max                 = $oT6SndAliase.PitchMax
-# $oT5SndAliase.team_pitch_mod          = $null
-$oT5SndAliase.min_priority              = $oT6SndAliase.PriorityMin
-$oT5SndAliase.max_priority              = $oT6SndAliase.PriorityMax
-$oT5SndAliase.min_priority_threshold    = $oT6SndAliase.PriorityThresholdMin
-$oT5SndAliase.max_priority_threshold    = $oT6SndAliase.PriorityThresholdMax
-$oT5SndAliase.spatialized               = $oT6SndAliase.PanType
-$oT5SndAliase.type                      = $oT6SndAliase.Storage
-$oT5SndAliase.loop                      = $oT6SndAliase.Looping
-$oT5SndAliase.randomize_type            = $oT6SndAliase.RandomizeType
-$oT5SndAliase.probability               = $oT6SndAliase.Probability
-$oT5SndAliase.start_delay               = $oT6SndAliase.StartDelay
-$oT5SndAliase.reverb_send               = $oT6SndAliase.ReverbSend
-# $oT5SndAliase.duck                    = $null # $oT6SndAliase.Duck
-$oT5SndAliase.pan                       = $hT6T5PanMap[$oT6SndAliase.Pan]
-$oT5SndAliase.center_send               = $oT6SndAliase.CenterSend
-$oT5SndAliase.envelop_min               = $oT6SndAliase.EnvelopMin
-$oT5SndAliase.envelop_max               = $oT6SndAliase.EnvelopMax
-$oT5SndAliase.envelop_percentage        = $oT6SndAliase.EnvelopPercent
-$oT5SndAliase.occlusion_level           = $oT6SndAliase.OcclusionLevel
-$oT5SndAliase.occlusion_wet_dry         = $oT6SndAliase.OcclusionLevel
-$oT5SndAliase.is_big                    = $oT6SndAliase.IsBig
-$oT5SndAliase.distance_lpf              = $oT6SndAliase.DistanceLpf
-$oT5SndAliase.move_type                 = $oT6SndAliase.FluxType
-$oT5SndAliase.move_time                 = $oT6SndAliase.FluxTime
-# $oT5SndAliase.real_delay              = "no"
-$oT5SndAliase.subtitle                  = $oT6SndAliase.Subtitle
-# $oT5SndAliase.mature                  = "both"
-$oT5SndAliase.doppler                   = $oT6SndAliase.Doppler
-# $oT5SndAliase.futz                    = "no"" # $oT6SndAliase.FutzPatch
-if ($oT6SndAliase.ContextType -in $aT5ContextTypes) { $oT5SndAliase.context_type= $oT6SndAliase.ContextType }
-if ($oT6SndAliase.ContextValue -in $aT5ContextValues) { $oT5SndAliase.context_value = $oT6SndAliase.ContextValue }
-# $oT5SndAliase.compression             = None
-$oT5SndAliase.timescale                 = $oT6SndAliase.TimeScale
-$oT5SndAliase.music                     = $oT6SndAliase.IsMusic
-$oT5SndAliase.fade_in                   = $oT6SndAliase.FadeIn
-$oT5SndAliase.fade_out                  = $oT6SndAliase.FadeOut
-# $oT5SndAliase.pc_format               = $null # ADPCM, PCM, XWMA, WMA; Doesn't make a difference so purely MetaData I think
-$oT5SndAliase.pause                     = $oT6SndAliase.Pauseable
-$oT5SndAliase.stop_on_death             = $oT6SndAliase.StopOnEntDeath
-switch ($oT6SndAliase.Bus) {
-    { $_ -eq "bus_fx" -or $_ -eq "bus_hdrfx" -or $_ -eq "bus_music" } { $oT5SndAliase.bus = "world" }
-    "bus_voice" { $oT5SndAliase.bus = "voice" }
-}
-$oT5SndAliase.snapshot                  = $hT6T5DuckGroupMap[$oT6SndAliase.DuckGroup]
-$oT5SndAliase.voice_limit               = $oT6SndAliase.VoiceLimit
-# $oT5SndAliase.file_xenon              = $null
-# $oT5SndAliase.file_size_xenon         = 0
-# $oT5SndAliase.file_ps3                = $null
-# $oT5SndAliase.file_size_ps3           = 0
-$oT5SndAliase.file_pc                   = $oT6SndAliase.FileSource
-# $oT5SndAliase.file_size_pc            = 0
-# $oT5SndAliase.file_wii                = $null
-# $oT5SndAliase.file_size_wii           = 0
-# $oT5SndAliase.source_csv              = $null
-# $oT5SndAliase.language                = "all"
 
-Write-Host "Here ya go! The T5 converted aliase:`n$((($oT5SndAliase | ConvertTo-Csv -NoTypeInformation | Select-Object -Skip 1) -replace '"', ''))"
-pause
+#  Work Directories
+# ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+$sBaseDir = Split-Path $PSScriptRoot -Parent
+$sODir = Join-Path $sBaseDir "Output"
+$aPSModuleOldPaths = $env:PSModulePath
+$env:PSModulePath = @(
+    "$sBaseDir\ps\Modules",
+    $aPSModuleOldPaths
+) -join [IO.Path]::PathSeparator
+
+#  Soundaliase Headers
+# ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+$sT5SndAHeaders = "name,file,template,loadspec,secondary,group,vol_min,vol_max,team_vol_mod,dist_min,dist_max,dist_reverb_max,volume_falloff_curve,reverb_falloff_curve,volume_min_falloff_curve,reverb_min_falloff_curve,limit_count,limit_type,entity_limit_count,entity_limit_type,pitch_min,pitch_max,team_pitch_mod,min_priority,max_priority,min_priority_threshold,max_priority_threshold,spatialized,type,loop,randomize_type,probability,start_delay,reverb_send,duck,pan,center_send,envelop_min,envelop_max,envelop_percentage,occlusion_level,occlusion_wet_dry,is_big,distance_lpf,move_type,move_time,real_delay,subtitle,mature,doppler,futz,context_type,context_value,compression,timescale,music,fade_in,fade_out,pc_format,pause,stop_on_death,bus,snapshot,voice_limit,file_xenon,file_size_xenon,file_ps3,file_size_ps3,file_pc,file_size_pc,file_wii,file_size_wii,source_csv,language"
+$sT6SndAHeaders = "Name,FileSource,Secondary,Storage,Bus,VolumeGroup,DuckGroup,Duck,ReverbSend,CenterSend,VolMin,VolMax,DistMin,DistMaxDry,DistMaxWet,DryMinCurve,DryMaxCurve,WetMinCurve,WetMaxCurve,LimitCount,EntityLimitCount,LimitType,EntityLimitType,PitchMin,PitchMax,PriorityMin,PriorityMax,PriorityThresholdMin,PriorityThresholdMax,PanType,Pan,Looping,RandomizeType,Probability,StartDelay,EnvelopMin,EnvelopMax,EnvelopPercent,OcclusionLevel,IsBig,DistanceLpf,FluxType,FluxTime,Subtitle,Doppler,ContextType,ContextValue,Timescale,IsMusic,IsCinematic,FadeIn,FadeOut,Pauseable,StopOnEntDeath,StopOnPlay,DopplerScale,FutzPatch,VoiceLimit,IgnoreMaxDist,NeverPlayTwice"
+
+
+# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+#   Imports
+# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+
+#  Modules
+# ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+Import-Module PathIO
+
+
+# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+#   Functions
+# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+
+#  Port the soundaliase
+# ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+function fnPortSndAFile {
+
+    $oUtf8Encoding = New-Object System.Text.UTF8Encoding($false)
+    $oSndA = [System.IO.File]::OpenText($global:sSndAFile)
+
+    if ($global:sTargetGame = "T5") {
+
+        $hSndAMap = Import-PowerShellDataFile "$sBaseDir\ps\Data\Mappings\snddriverglobals\CoD9to7.psd1"
+        $sSndAHeader = $oSndA.ReadLine()
+        $iSndALineNum = 1
+        $aSndAOData = @($sT5SndAHeaders)
+
+        while (($sSndARecord = $oSndA.ReadLine()) -ne $null) {
+
+            #  Ready up data
+            # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+            $iSndALineNum++
+            $oT6SndARecord = ConvertFrom-Csv `
+                -InputObject $sSndARecord `
+                -Header ($sT6SndAHeaders -split ',')
+
+            $oT5SndAData = [PSCustomObject][ordered]@{
+                "name" = "INSERT"
+                "file" = "INSERT"
+                "template" = $null
+                "loadspec" = $null
+                "secondary" = "INSERT"
+                "group" = "INSERT"
+                "vol_min" = "INSERT"
+                "vol_max" = "INSERT"
+                "team_vol_mod" = 100
+                "dist_min" = "INSERT"
+                "dist_max" = "INSERT"
+                "dist_reverb_max" = "INSERT"
+                "volume_falloff_curve" = "INSERT"
+                "reverb_falloff_curve" = "INSERT"
+                "volume_min_falloff_curve" = "INSERT"
+                "reverb_min_falloff_curve" = "INSERT"
+                "limit_count" = "INSERT"
+                "limit_type" = "INSERT"
+                "entity_limit_count" = "INSERT"
+                "entity_limit_type" = "INSERT"
+                "pitch_min" = "INSERT"
+                "pitch_max" = "INSERT"
+                "team_pitch_mod" = 0
+                "min_priority" = "INSERT"
+                "max_priority" = "INSERT"
+                "min_priority_threshold" = "INSERT"
+                "max_priority_threshold" = "INSERT"
+                "spatialized" = "INSERT"
+                "type" = "INSERT"
+                "loop" = "INSERT"
+                "randomize_type" = $null
+                "probability" = "INSERT"
+                "start_delay" = "INSERT"
+                "reverb_send" = "INSERT"
+                "duck" = $null
+                "pan" = "INSERT"
+                "center_send" = "INSERT"
+                "envelop_min" = "INSERT"
+                "envelop_max" = "INSERT"
+                "envelop_percentage" = "INSERT"
+                "occlusion_level" = "INSERT"
+                "occlusion_wet_dry" = "INSERT"
+                "is_big" = "INSERT"
+                "distance_lpf" = "INSERT"
+                "move_type" = "INSERT"
+                "move_time" = "INSERT"
+                "real_delay" = "no"
+                "subtitle" = "INSERT"
+                "mature" = "both"
+                "doppler" = "INSERT"
+                "futz" = "no"
+                "context_type" = $null
+                "context_value" = $null
+                "compression" = $null
+                "timescale" = "INSERT"
+                "music" = "INSERT"
+                "fade_in" = "INSERT"
+                "fade_out" = "INSERT"
+                "pc_format" = $null
+                "pause" = "INSERT"
+                "stop_on_death" = "INSERT"
+                "bus" = "INSERT"
+                "snapshot" = "INSERT"
+                "voice_limit" = "INSERT"
+                "file_xenon" = $null
+                "file_size_xenon" = 0
+                "file_ps3" = $null
+                "file_size_ps3" = 0
+                "file_pc" = "INSERT"
+                "file_size_pc" = 0
+                "file_wii" = $null
+                "file_size_wii" = 0
+                "source_csv" = $null
+                "language" = "all"
+            }
+            $hSndAHeaderMap = @{
+                name = "Name"
+                file = "FileSource"
+                secondary = "Secondary"
+                vol_min = "VolMin"
+                vol_max = "VolMax"
+                dist_min = "DistMin"
+                dist_max = "DistMaxDry"
+                dist_reverb_max = "DistMaxWet"
+                limit_count = "LimitCount"
+                limit_type = "LimitType"
+                entity_limit_count = "EntityLimitCount"
+                entity_limit_type = "EntityLimitType"
+                pitch_min = "PitchMin"
+                pitch_max = "PitchMax"
+                min_priority = "PriorityMin"
+                max_priority = "PriorityMax"
+                min_priority_threshold = "PriorityThresholdMin"
+                max_priority_threshold = "PriorityThresholdMax"
+                spatialized = "PanType"
+                type = "Storage"
+                loop = "Looping"
+                randomize_type = "RandomizeType"
+                probability = "Probability"
+                start_delay = "StartDelay"
+                reverb_send = "ReverbSend"
+                center_send = "CenterSend"
+                envelop_min = "EnvelopMin"
+                envelop_max = "EnvelopMax"
+                envelop_percentage = "EnvelopPercent"
+                occlusion_level = "OcclusionLevel"
+                occlusion_wet_dry = "OcclusionLevel"
+                is_big = "IsBig"
+                distance_lpf = "DistanceLpf"
+                move_type = "FluxType"
+                move_time = "FluxTime"
+                subtitle = "Subtitle"
+                doppler = "Doppler"
+                timescale = "TimeScale"
+                music = "IsMusic"
+                fade_in = "FadeIn"
+                fade_out = "FadeOut"
+                pause = "Pauseable"
+                stop_on_death = "StopOnEntDeath"
+                voice_limit = "VoiceLimit"
+                file_pc = "FileSource"
+            }
+
+            #  Port simple fields
+            # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+            foreach ($sT5SndAHeader in $hSndAHeaderMap.Keys) {
+                $sT6SndAHeader = $hSndAHeaderMap[$sT5SndAHeader]
+                $oT5SndAData.$sT5SndAHeader = $oT6SndARecord.$sT6SndAHeader
+            }
+
+            # $oT5SndAData.template = $null
+            # $oT5SndAData.loadspec = $null
+            # $oT5SndAData.team_vol_mod = 100
+            # $oT5SndAData.team_pitch_mod = $null
+            # $oT5SndAData.duck = $null # $oT6SndARecord.Duck
+            # $oT5SndAData.real_delay = "no"
+            # $oT5SndAData.mature = "both"
+            # $oT5SndAData.futz = "no" # $oT6SndARecord.FutzPatch
+            # $oT5SndAData.compression = None
+            # $oT5SndAData.pc_format = $null # ADPCM, PCM, XWMA, WMA; Doesn't make a difference so purely MetaData I think
+            # $oT5SndAData.file_xenon = $null
+            # $oT5SndAData.file_size_xenon = 0
+            # $oT5SndAData.file_ps3 = $null
+            # $oT5SndAData.file_size_ps3 = 0
+            # $oT5SndAData.file_size_pc = 0
+            # $oT5SndAData.file_wii = $null
+            # $oT5SndAData.file_size_wii = 0
+            # $oT5SndAData.source_csv = $null
+            # $oT5SndAData.language = "all"
+
+
+            #  Port IQ requiring keys
+            # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+            if ($hSndAMap.VolumeGroup.ContainsKey($oT6SndARecord.VolumeGroup)) {
+                $oT5SndAData.group = $hSndAMap.VolumeGroup[$oT6SndARecord.VolumeGroup]
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown VolumeGroup found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    1 | Out-Null
+                Exit
+            }
+
+            if ($hSndAMap.Curve.ContainsKey($oT6SndARecord.DryMaxCurve)) {
+                $oT5SndAData.volume_falloff_curve = $hSndAMap.Curve[$oT6SndARecord.DryMaxCurve]
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown DryMaxCurve found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    1 | Out-Null
+                Exit
+            }
+
+            if ($hSndAMap.Curve.ContainsKey($oT6SndARecord.WetMaxCurve)) {
+                $oT5SndAData.reverb_falloff_curve = $hSndAMap.Curve[$oT6SndARecord.WetMaxCurve]
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown WetMaxCurve found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    1 | Out-Null
+                Exit
+            }
+
+            if ($hSndAMap.Curve.ContainsKey($oT6SndARecord.DryMinCurve)) {
+                $oT5SndAData.volume_min_falloff_curve = $hSndAMap.Curve[$oT6SndARecord.DryMinCurve]
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown DryMinCurve found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    1 | Out-Null
+                Exit
+            }
+
+            if ($hSndAMap.Curve.ContainsKey($oT6SndARecord.WetMinCurve)) {
+                $oT5SndAData.reverb_min_falloff_curve = $hSndAMap.Curve[$oT6SndARecord.WetMinCurve]
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown WetMinCurve found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    1 | Out-Null
+                Exit
+            }
+
+            if ($hSndAMap.Pan.ContainsKey($oT6SndARecord.Pan)) {
+                $oT5SndAData.pan = $hSndAMap.Pan[$oT6SndARecord.Pan]
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown Pan found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    1 | Out-Null
+                Exit
+            }
+
+            if (-not $oT6SndARecord.ContextType) {
+                $oT5SndAData.context_type = $null
+            } elseif ($hSndAMap.Context.ContainsKey($oT6SndARecord.ContextType)) {
+                $oT5SndAData.context_type = $oT6SndARecord.ContextType
+            } else {
+                fnWinMsgBox `
+                    "Warning" `
+                    "Unknown ContextType found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    2 | Out-Null
+            }
+
+            if ((-not $oT6SndARecord.ContextType) -and (-not $oT6SndARecord.ContextValue)) {
+                $oT5SndAData.context_value = $null
+            } elseif ($oT6SndARecord.ContextValue -in $hSndAMap.Context[$oT6SndARecord.ContextType]) {
+                $oT5SndAData.context_value = $oT6SndARecord.ContextValue
+            } else {
+                fnWinMsgBox `
+                    "Warning" `
+                    "Unknown ContextValue found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    2 | Out-Null
+            }
+
+            if ($hSndAMap.Bus.ContainsKey($oT6SndARecord.Bus)) {
+                $oT5SndAData.bus = $hSndAMap.Bus[$oT6SndARecord.Bus]
+            } else {
+                fnWinMsgBox `
+                    "Warning" `
+                    "Unknown Bus found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    2 | Out-Null
+            }
+
+            if ($hSndAMap.Duck.ContainsKey($oT6SndARecord.DuckGroup)) {
+                $oT5SndAData.snapshot = $hSndAMap.Duck[$oT6SndARecord.DuckGroup]
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown Duck found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    1 | Out-Null
+                Exit
+            }
+
+            #  Populate CSV data array
+            # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+            $aSndAOData += ($oT5SndAData | ConvertTo-Csv -NoTypeInformation | Select-Object -Skip 1).Replace('"', '')
+        }
+
+    } else {
+        Exit # Reserve for t5 to t6
+    }
+
+    #  Output File
+    # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+    #$aSndAOData += ""
+    $sSndAOFile = "$sODir\$(Split-Path $global:sSndAFile -Leaf)"
+    [System.IO.File]::WriteAllLines(
+        "$sSndAOFile",
+        $aSndAOData,
+        $oUtf8Encoding
+    )
+
+    fnWinMsgBox `
+        "Information" `
+        "Soundaliase successfully ported to $($global:sTargetGame)!`nOutput at: $sSndAOFile" `
+        4 | Out-Null
+}
+
+#  Import the soundaliase file
+# ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+function fnImportSndAFile {
+
+    #  Get file
+    # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+    $global:sSndAFile = fnFileSel `
+        "Select the soundaliase file to port" `
+        "CSV (*.csv)|*.csv"
+
+    #  File Presence check
+    # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+    if ($global:sSndAFile -eq "null" -or -not $global:sSndAFile) {
+
+        fnWinMsgBox `
+            "Error" `
+            "No soundaliase file selected." `
+            1 | Out-Null
+
+        Exit
+    }
+
+    #  Validating file
+    # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+    $oSndA = [System.IO.File]::OpenText($global:sSndAFile)
+
+    try {
+
+        #  Header validation
+        # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+        $sSndAHeader = $oSndA.ReadLine()
+        switch ($sSndAHeader) {
+            $sT6SndAHeaders { $global:sTargetGame = "T5" }
+            $sT5SndAHeaders {
+                $global:sTargetGame = "T6"
+                fnWinMsgBox `
+                    "Error" `
+                    "T5 to T6 soundaliase conversion is not support yet.`n:P" `
+                    1 | Out-Null
+
+                Exit
+            }
+            Default {
+                fnWinMsgBox `
+                    "Error" `
+                    "Invalid soundaliase file." `
+                    1 | Out-Null
+
+                Exit
+            }
+        }
+
+        #  Entry Format check
+        # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+        $iLineNum = 1
+        while (($sSndALine = $oSndA.ReadLine()) -ne $null) {
+            $iSndALineCommaCount = $sSndALine.Length - $sSndALine.Replace(',', '').Length
+            if (($global:sTargetGame -eq "T5" -and $iSndALineCommaCount -ne 59) -or ($global:sTargetGame -eq "T6" -ne $iSndALineCommaCount -ne 73)) {
+                fnWinMsgBox `
+                    "Error" `
+                    "Invalid number of attributes in line $iLineNum." `
+                    1 | Out-Null
+
+                Exit
+            }
+            $iLineNum++
+        }
+
+        #  Entry Presence check
+        # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+        if ($iLineNum -eq 1) {
+            fnWinMsgBox `
+                "Error" `
+                "No records in the soundaliase." `
+                1 | Out-Null
+
+            Exit
+        }
+    } finally { $oSndA.Dispose() }
+}
+
+function fnInit {
+
+    if (-not (Test-Path $sODir)) {
+        New-Item `
+            -ItemType Directory `
+            -Path $sODir
+    }
+
+    fnImportSndAFile
+    fnPortSndAFile
+}
+
+# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+#   Execution
+# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+
+fnInit
+
+$env:PSModulePath = $aPSModuleOldPaths
+
+#Pause
