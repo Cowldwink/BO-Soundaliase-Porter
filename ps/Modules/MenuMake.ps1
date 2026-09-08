@@ -117,7 +117,7 @@ function fnMenuMake {
             }
 
             $Host.UI.RawUI.WindowTitle = $sWinTitle
-            #Clear-Host # Task: Remove Clear-Host when deboog
+            Clear-Host # NOTE: Remove Clear-Host when deboog
 
             #  Draw options
             for ($i = 0; $i -lt $hMenuOpts["Names"].Count; $i++) {
@@ -141,7 +141,7 @@ function fnMenuMake {
                     }
                 }
             }
-            Write-Host $iOpt -ForegroundColor Blue # TASK: Get rid of Devbooz
+            #Write-Host $iOpt -ForegroundColor Blue # NOTE: Activate for Debugging
 
             #  Menu actions on user input
             # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 

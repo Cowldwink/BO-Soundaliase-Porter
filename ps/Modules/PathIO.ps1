@@ -83,7 +83,7 @@ function fnFileSel {
             #  User wants to set selection to null
             # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
             if ($bWinMsgBoxO -eq $true) {
-                Return "null" # Gonna have to use "null" instead of $null since returning nothing also results in a $null
+                Return -1
             }
 
             #  User wants to retry selection

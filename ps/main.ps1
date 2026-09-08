@@ -1,37 +1,40 @@
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
-#   Parameters
-# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
-
-
-# ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
 #   Environtment Variables
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
-
 
 #  Work Directories
 # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
 $sBaseDir = Split-Path $PSScriptRoot -Parent
-$sODir = Join-Path $sBaseDir "Output"
-$aPSModuleOldPaths = $env:PSModulePath
-$env:PSModulePath = @(
-    "$sBaseDir\ps\Modules",
-    $aPSModuleOldPaths
-) -join [IO.Path]::PathSeparator
+$sOutDir = "$sBaseDir\Output"
 
 #  Soundaliase Headers
 # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
 $sT5SndAHeaders = "name,file,template,loadspec,secondary,group,vol_min,vol_max,team_vol_mod,dist_min,dist_max,dist_reverb_max,volume_falloff_curve,reverb_falloff_curve,volume_min_falloff_curve,reverb_min_falloff_curve,limit_count,limit_type,entity_limit_count,entity_limit_type,pitch_min,pitch_max,team_pitch_mod,min_priority,max_priority,min_priority_threshold,max_priority_threshold,spatialized,type,loop,randomize_type,probability,start_delay,reverb_send,duck,pan,center_send,envelop_min,envelop_max,envelop_percentage,occlusion_level,occlusion_wet_dry,is_big,distance_lpf,move_type,move_time,real_delay,subtitle,mature,doppler,futz,context_type,context_value,compression,timescale,music,fade_in,fade_out,pc_format,pause,stop_on_death,bus,snapshot,voice_limit,file_xenon,file_size_xenon,file_ps3,file_size_ps3,file_pc,file_size_pc,file_wii,file_size_wii,source_csv,language"
 $sT6SndAHeaders = "Name,FileSource,Secondary,Storage,Bus,VolumeGroup,DuckGroup,Duck,ReverbSend,CenterSend,VolMin,VolMax,DistMin,DistMaxDry,DistMaxWet,DryMinCurve,DryMaxCurve,WetMinCurve,WetMaxCurve,LimitCount,EntityLimitCount,LimitType,EntityLimitType,PitchMin,PitchMax,PriorityMin,PriorityMax,PriorityThresholdMin,PriorityThresholdMax,PanType,Pan,Looping,RandomizeType,Probability,StartDelay,EnvelopMin,EnvelopMax,EnvelopPercent,OcclusionLevel,IsBig,DistanceLpf,FluxType,FluxTime,Subtitle,Doppler,ContextType,ContextValue,Timescale,IsMusic,IsCinematic,FadeIn,FadeOut,Pauseable,StopOnEntDeath,StopOnPlay,DopplerScale,FutzPatch,VoiceLimit,IgnoreMaxDist,NeverPlayTwice"
 
+#  Misc
+# ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+$oUtf8Enc = New-Object System.Text.UTF8Encoding($false)
+
 
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
 #   Imports
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
 
+#  Libraries
+# ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+Add-Type -AssemblyName System.Windows.Forms
+
 #  Modules
 # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-Import-Module PathIO
+. "$PSScriptRoot\Modules\MenuMake.ps1"
+. "$PSScriptRoot\Modules\PathIO.ps1"
 
+#  Data
+# ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+$sSndAFieldDefFile = "$PSScriptRoot\Data\Mappings\FieldDef.json"
+$sT6T5SndAMapFile = "$PSScriptRoot\Data\Mappings\T6-T5.psd1"
+$sT5T6SndAMapFile = "$PSScriptRoot\Data\Mappings\T5-T6.psd1"
 
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
 #   Functions
@@ -40,304 +43,339 @@ Import-Module PathIO
 #  Port the soundaliase
 # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
 function fnPortSndAFile {
+    Clear-Host
 
-    $oUtf8Encoding = New-Object System.Text.UTF8Encoding($false)
-    $oSndA = [System.IO.File]::OpenText($global:sSndAFile)
+    $oFileEvt = [System.IO.File]::OpenText($global:sSndAFile)
 
-    if ($global:sTargetGame = "T5") {
+    $iSndATotalL = 0
+    Get-Content $global:sSndAFile | ForEach-Object { $iSndATotalL++ }
 
-        $hSndAMap = Import-PowerShellDataFile "$sBaseDir\ps\Data\Mappings\snddriverglobals\CoD9to7.psd1"
-        $sSndAHeader = $oSndA.ReadLine()
-        $iSndALineNum = 1
-        $aSndAOData = @($sT5SndAHeaders)
+    $sSndAHeaders = $oFileEvt.ReadLine()
+    $iSndAL = 1
 
-        while (($sSndARecord = $oSndA.ReadLine()) -ne $null) {
+    if ($global:sTargetGame -eq "T5") {
+        $hSndAValMap = Import-PowerShellDataFile $sT6T5SndAMapFile
+        $aSndAOutData = @($sT5SndAHeaders)
+        $sOgSndAHeaders = $sT6SndAHeaders
+    } else {
+        $hSndAValMap = Import-PowerShellDataFile $sT5T6SndAMapFile
+        $aSndAOutData = @($sT6SndAHeaders)
+        $sOgSndAHeaders = $sT5SndAHeaders
+    }
 
-            #  Ready up data
-            # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-            $iSndALineNum++
-            $oT6SndARecord = ConvertFrom-Csv `
-                -InputObject $sSndARecord `
-                -Header ($sT6SndAHeaders -split ',')
+    while (($sSndARec = $oFileEvt.ReadLine()) -ne $null) {
+        $iSndAL++
+        $oOgSndARec = ConvertFrom-Csv `
+            -InputObject $sSndARec `
+            -Header ($sOgSndAHeaders -split ',')
 
-            $oT5SndAData = [PSCustomObject][ordered]@{
-                "name" = "INSERT"
-                "file" = "INSERT"
+        if ($global:sTargetGame -eq "T5") {
+            $oSndANewRecData = [PSCustomObject][ordered]@{
+                "name" = $oOgSndARec.Name
+                "file" = $oOgSndARec.FileSource
                 "template" = $null
                 "loadspec" = $null
-                "secondary" = "INSERT"
+                "secondary" = $oOgSndARec.Secondary
                 "group" = "INSERT"
-                "vol_min" = "INSERT"
-                "vol_max" = "INSERT"
+                "vol_min" = $oOgSndARec.VolMin
+                "vol_max" = $oOgSndARec.VolMax
                 "team_vol_mod" = 100
-                "dist_min" = "INSERT"
-                "dist_max" = "INSERT"
-                "dist_reverb_max" = "INSERT"
+                "dist_min" = $oOgSndARec.DistMin
+                "dist_max" = $oOgSndARec.DistMaxDry
+                "dist_reverb_max" = $oOgSndARec.DistMaxWet
                 "volume_falloff_curve" = "INSERT"
                 "reverb_falloff_curve" = "INSERT"
                 "volume_min_falloff_curve" = "INSERT"
                 "reverb_min_falloff_curve" = "INSERT"
-                "limit_count" = "INSERT"
-                "limit_type" = "INSERT"
-                "entity_limit_count" = "INSERT"
-                "entity_limit_type" = "INSERT"
-                "pitch_min" = "INSERT"
-                "pitch_max" = "INSERT"
+                "limit_count" = $oOgSndARec.LimitCount
+                "limit_type" = $oOgSndARec.LimitType
+                "entity_limit_count" = $oOgSndARec.EntityLimitCount
+                "entity_limit_type" = $oOgSndARec.EntityLimitType
+                "pitch_min" = $oOgSndARec.PitchMin
+                "pitch_max" = $oOgSndARec.PitchMax
                 "team_pitch_mod" = 0
-                "min_priority" = "INSERT"
-                "max_priority" = "INSERT"
-                "min_priority_threshold" = "INSERT"
-                "max_priority_threshold" = "INSERT"
-                "spatialized" = "INSERT"
-                "type" = "INSERT"
-                "loop" = "INSERT"
-                "randomize_type" = $null
-                "probability" = "INSERT"
-                "start_delay" = "INSERT"
-                "reverb_send" = "INSERT"
+                "min_priority" = $oOgSndARec.PriorityMin
+                "max_priority" = $oOgSndARec.PriorityMax
+                "min_priority_threshold" = $oOgSndARec.PriorityThresholdMin
+                "max_priority_threshold" = $oOgSndARec.PriorityThresholdMax
+                "spatialized" = $oOgSndARec.PanType
+                "type" = $oOgSndARec.Storage
+                "loop" = $oOgSndARec.Looping
+                "randomize_type" = $oOgSndARec.RandomizeType
+                "probability" = $oOgSndARec.Probability
+                "start_delay" = $oOgSndARec.StartDelay
+                "reverb_send" = $oOgSndARec.ReverbSend
                 "duck" = $null
                 "pan" = "INSERT"
-                "center_send" = "INSERT"
-                "envelop_min" = "INSERT"
-                "envelop_max" = "INSERT"
-                "envelop_percentage" = "INSERT"
-                "occlusion_level" = "INSERT"
-                "occlusion_wet_dry" = "INSERT"
-                "is_big" = "INSERT"
-                "distance_lpf" = "INSERT"
+                "center_send" = $oOgSndARec.CenterSend
+                "envelop_min" = $oOgSndARec.EnvelopMin
+                "envelop_max" = $oOgSndARec.EnvelopMax
+                "envelop_percentage" = $oOgSndARec.EnvelopPercent
+                "occlusion_level" = $oOgSndARec.OcclusionLevel
+                "occlusion_wet_dry" = $oOgSndARec.OcclusionLevel
+                "is_big" = $oOgSndARec.IsBig
+                "distance_lpf" = $oOgSndARec.DistanceLpf
                 "move_type" = "INSERT"
-                "move_time" = "INSERT"
+                "move_time" = $oOgSndARec.FluxTime
                 "real_delay" = "no"
-                "subtitle" = "INSERT"
+                "subtitle" = $oOgSndARec.Subtitle
                 "mature" = "both"
-                "doppler" = "INSERT"
-                "futz" = "no"
+                "doppler" = $oOgSndARec.Doppler
+                "futz" = "INSERT"
                 "context_type" = $null
                 "context_value" = $null
                 "compression" = $null
-                "timescale" = "INSERT"
-                "music" = "INSERT"
-                "fade_in" = "INSERT"
-                "fade_out" = "INSERT"
+                "timescale" = $oOgSndARec.TimeScale
+                "music" = $oOgSndARec.IsMusic
+                "fade_in" = $oOgSndARec.FadeIn
+                "fade_out" = $oOgSndARec.FadeOut
                 "pc_format" = $null
-                "pause" = "INSERT"
-                "stop_on_death" = "INSERT"
+                "pause" = $oOgSndARec.Pauseable
+                "stop_on_death" = $oOgSndARec.StopOnEntDeath
                 "bus" = "INSERT"
                 "snapshot" = "INSERT"
-                "voice_limit" = "INSERT"
+                "voice_limit" = $oOgSndARec.VoiceLimit
                 "file_xenon" = $null
                 "file_size_xenon" = 0
                 "file_ps3" = $null
                 "file_size_ps3" = 0
-                "file_pc" = "INSERT"
+                "file_pc" = $oOgSndARec.FileSource
                 "file_size_pc" = 0
                 "file_wii" = $null
                 "file_size_wii" = 0
                 "source_csv" = $null
                 "language" = "all"
             }
-            $hSndAHeaderMap = @{
-                name = "Name"
-                file = "FileSource"
-                secondary = "Secondary"
-                vol_min = "VolMin"
-                vol_max = "VolMax"
-                dist_min = "DistMin"
-                dist_max = "DistMaxDry"
-                dist_reverb_max = "DistMaxWet"
-                limit_count = "LimitCount"
-                limit_type = "LimitType"
-                entity_limit_count = "EntityLimitCount"
-                entity_limit_type = "EntityLimitType"
-                pitch_min = "PitchMin"
-                pitch_max = "PitchMax"
-                min_priority = "PriorityMin"
-                max_priority = "PriorityMax"
-                min_priority_threshold = "PriorityThresholdMin"
-                max_priority_threshold = "PriorityThresholdMax"
-                spatialized = "PanType"
-                type = "Storage"
-                loop = "Looping"
-                randomize_type = "RandomizeType"
-                probability = "Probability"
-                start_delay = "StartDelay"
-                reverb_send = "ReverbSend"
-                center_send = "CenterSend"
-                envelop_min = "EnvelopMin"
-                envelop_max = "EnvelopMax"
-                envelop_percentage = "EnvelopPercent"
-                occlusion_level = "OcclusionLevel"
-                occlusion_wet_dry = "OcclusionLevel"
-                is_big = "IsBig"
-                distance_lpf = "DistanceLpf"
-                move_type = "FluxType"
-                move_time = "FluxTime"
-                subtitle = "Subtitle"
-                doppler = "Doppler"
-                timescale = "TimeScale"
-                music = "IsMusic"
-                fade_in = "FadeIn"
-                fade_out = "FadeOut"
-                pause = "Pauseable"
-                stop_on_death = "StopOnEntDeath"
-                voice_limit = "VoiceLimit"
-                file_pc = "FileSource"
-            }
+            $aSndAKeyMaps = @(
+                @("VolumeGroup", "group"),
+                @("FluxType", "move_type"),
+                @("Pan", "pan"),
+                @("Bus", "bus"),
+                @("DuckGroup", "snapshot")
+            )
+            $aSndACurveKeyMaps = @(
+                @("DryMaxCurve", "volume_falloff_curve"),
+                @("WetMaxCurve", "reverb_falloff_curve"),
+                @("DryMinCurve", "volume_min_falloff_curve"),
+                @("WetMinCurve", "reverb_min_falloff_curve")
+            )
 
-            #  Port simple fields
-            # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-            foreach ($sT5SndAHeader in $hSndAHeaderMap.Keys) {
-                $sT6SndAHeader = $hSndAHeaderMap[$sT5SndAHeader]
-                $oT5SndAData.$sT5SndAHeader = $oT6SndARecord.$sT6SndAHeader
-            }
-
-            # $oT5SndAData.template = $null
-            # $oT5SndAData.loadspec = $null
-            # $oT5SndAData.team_vol_mod = 100
-            # $oT5SndAData.team_pitch_mod = $null
-            # $oT5SndAData.duck = $null # $oT6SndARecord.Duck
-            # $oT5SndAData.real_delay = "no"
-            # $oT5SndAData.mature = "both"
-            # $oT5SndAData.futz = "no" # $oT6SndARecord.FutzPatch
-            # $oT5SndAData.compression = None
-            # $oT5SndAData.pc_format = $null # ADPCM, PCM, XWMA, WMA; Doesn't make a difference so purely MetaData I think
-            # $oT5SndAData.file_xenon = $null
-            # $oT5SndAData.file_size_xenon = 0
-            # $oT5SndAData.file_ps3 = $null
-            # $oT5SndAData.file_size_ps3 = 0
-            # $oT5SndAData.file_size_pc = 0
-            # $oT5SndAData.file_wii = $null
-            # $oT5SndAData.file_size_wii = 0
-            # $oT5SndAData.source_csv = $null
-            # $oT5SndAData.language = "all"
-
-
-            #  Port IQ requiring keys
-            # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-            if ($hSndAMap.VolumeGroup.ContainsKey($oT6SndARecord.VolumeGroup)) {
-                $oT5SndAData.group = $hSndAMap.VolumeGroup[$oT6SndARecord.VolumeGroup]
+            if ($hSndAValMap.FutzPatch.ContainsKey($oOgSndARec.FutzPatch)) {
+                $oSndANewRecData.futz = $hSndAValMap.Context.Type.($oOgSndARec.FutzPatch)
+            } elseif ([string]::IsNullOrEmpty($oOgSndARec.FutzPatch)) {
+                $oSndANewRecData.futz = "no"
             } else {
                 fnWinMsgBox `
                     "Error" `
-                    "Unknown VolumeGroup found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    "Unknown FutzPatch found at line $($iSndAL)." `
                     1 | Out-Null
                 Exit
             }
 
-            if ($hSndAMap.Curve.ContainsKey($oT6SndARecord.DryMaxCurve)) {
-                $oT5SndAData.volume_falloff_curve = $hSndAMap.Curve[$oT6SndARecord.DryMaxCurve]
+            $bContextSet = $false
+            if (-not [string]::IsNullOrEmpty($oOgSndARec.ContextType)) {
+                if ($hSndAValMap.Context.Type.ContainsKey($oOgSndARec.ContextType)) {
+                    $oSndANewRecData.context_type = $hSndAValMap.Context.Type.($oOgSndARec.ContextType)
+                    $bContextSet = $true
+                } else {
+                    fnWinMsgBox `
+                        "Error" `
+                        "Unknown context_type found at line $($iSndAL)." `
+                        1 | Out-Null
+                    Exit
+                }
+            } else {
+                $oSndANewRecData.context_type = $null
+            }
+
+            if ($bContextSet -and (-not [string]::IsNullOrEmpty($oSndANewRecData.context_type))) {
+                if ($oOgSndARec.ContextValue -in $hSndAValMap.Context.Value.($oOgSndARec.ContextType)) {
+                    $oSndANewRecData.context_value = $oOgSndARec.ContextValue
+                } else {
+                    fnWinMsgBox `
+                        "Error" `
+                        "Unknown ContextValue found at line $($iSndAL)." `
+                        1 | Out-Null
+                    Exit
+                }
+            } else {
+                $oSndANewRecData.context_value = $null
+            }
+
+        } else {
+            $oSndANewRecData = [PSCustomObject][ordered]@{
+                Name                   = $oOgSndARec.name
+                FileSource             = $oOgSndARec.file
+                Secondary              = $oOgSndARec.secondary
+                Storage                = $oOgSndARec.type
+                Bus                    = "INSERT"
+                VolumeGroup            = "INSERT"
+                DuckGroup              = "INSERT"
+                Duck                   = $null
+                ReverbSend             = $oOgSndARec.reverb_send
+                CenterSend             = $oOgSndARec.center_send
+                VolMin                 = $oOgSndARec.vol_min
+                VolMax                 = $oOgSndARec.vol_max
+                DistMin                = $oOgSndARec.dist_min
+                DistMaxDry             = $oOgSndARec.dist_max
+                DistMaxWet             = $oOgSndARec.dist_reverb_max
+                DryMinCurve            = "INSERT"
+                DryMaxCurve            = "INSERT"
+                WetMinCurve            = "INSERT"
+                WetMaxCurve            = "INSERT"
+                LimitCount              = $oOgSndARec.limit_count
+                EntityLimitCount        = $oOgSndARec.entity_limit_count
+                LimitType               = $oOgSndARec.limit_type
+                EntityLimitType         = $oOgSndARec.entity_limit_type
+                PitchMin               = $oOgSndARec.pitch_min
+                PitchMax               = $oOgSndARec.pitch_max
+                PriorityMin            = $oOgSndARec.min_priority
+                PriorityMax             = $oOgSndARec.max_priority
+                PriorityThresholdMin   = $oOgSndARec.min_priority_threshold
+                PriorityThresholdMax   = $oOgSndARec.max_priority_threshold
+                PanType                = $oOgSndARec.spatialized
+                Pan                    = "INSERT"
+                Looping                = $oOgSndARec.loop
+                RandomizeType          = $oOgSndARec.randomize_type
+                Probability            = $oOgSndARec.probability
+                StartDelay             = $oOgSndARec.start_delay
+                EnvelopMin             = $oOgSndARec.envelop_min
+                EnvelopMax             = $oOgSndARec.envelop_max
+                EnvelopPercent         = $oOgSndARec.envelop_percentage
+                OcclusionLevel         = $oOgSndARec.occlusion_level
+                IsBig                  = $oOgSndARec.is_big
+                DistanceLpf            = $oOgSndARec.distance_lpf
+                FluxType               = "INSERT"
+                FluxTime               = $oOgSndARec.move_time
+                Subtitle               = $oOgSndARec.subtitle
+                Doppler                = $oOgSndARec.doppler
+                ContextType            = "INSERT"
+                ContextValue           = "INSERT"
+                Timescale              = $oOgSndARec.timescale
+                IsMusic                = $oOgSndARec.music
+                IsCinematic            = "no"
+                FadeIn                 = $oOgSndARec.fade_in
+                FadeOut                = $oOgSndARec.fade_out
+                Pauseable              = $oOgSndARec.pause
+                StopOnEntDeath         = $oOgSndARec.stop_on_death
+                StopOnPlay             = $null
+                DopplerScale           = $oOgSndARec.doppler
+                FutzPatch              = "INSERT"
+                VoiceLimit             = $oOgSndARec.voice_limit
+                IgnoreMaxDist          = "no"
+                NeverPlayTwice         = "no"
+            }
+            $aSndAKeyMaps = @(
+                @("bus", "Bus"),
+                @("group", "VolumeGroup"),
+                @("snapshot", "DuckGroup"),
+                @("move_type", "FluxType"),
+                @("pan", "Pan")
+            )
+            $aSndACurveKeyMaps = @(
+                @("volume_min_falloff_curve", "DryMinCurve"),
+                @("volume_falloff_curve", "DryMaxCurve"),
+                @("reverb_min_falloff_curve", "WetMinCurve"),
+                @("reverb_falloff_curve", "WetMaxCurve")
+            )
+
+            if ($hSndAValMap.futz.ContainsKey($oOgSndARec.futz)) {
+                $oSndANewRecData.FutzPatch = $hSndAValMap.futz.($oOgSndARec.futz)
+            } elseif ($oOgSndARec.futz -eq "no") {
+                $oSndANewRecData.FutzPatch = $null
             } else {
                 fnWinMsgBox `
                     "Error" `
-                    "Unknown DryMaxCurve found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
+                    "Unknown futz found at line $($iSndAL)." `
                     1 | Out-Null
                 Exit
             }
 
-            if ($hSndAMap.Curve.ContainsKey($oT6SndARecord.WetMaxCurve)) {
-                $oT5SndAData.reverb_falloff_curve = $hSndAMap.Curve[$oT6SndARecord.WetMaxCurve]
+            $bContextSet = $false
+            if (-not [string]::IsNullOrEmpty($oOgSndARec.context_type)) {
+                if ($hSndAValMap.Context.Type.ContainsKey($oOgSndARec.context_type)) {
+                    $oSndANewRecData.ContextType = $hSndAValMap.Context.Type.($oOgSndARec.context_type)
+                    $bContextSet = $true
+                } else {
+                    fnWinMsgBox `
+                        "Error" `
+                        "Unknown context_type found at line $($iSndAL)." `
+                        1 | Out-Null
+                    Exit
+                }
             } else {
-                fnWinMsgBox `
-                    "Error" `
-                    "Unknown WetMaxCurve found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
-                    1 | Out-Null
-                Exit
+                $oSndANewRecData.ContextType = $null
             }
 
-            if ($hSndAMap.Curve.ContainsKey($oT6SndARecord.DryMinCurve)) {
-                $oT5SndAData.volume_min_falloff_curve = $hSndAMap.Curve[$oT6SndARecord.DryMinCurve]
-            } else {
-                fnWinMsgBox `
-                    "Error" `
-                    "Unknown DryMinCurve found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
-                    1 | Out-Null
-                Exit
-            }
 
-            if ($hSndAMap.Curve.ContainsKey($oT6SndARecord.WetMinCurve)) {
-                $oT5SndAData.reverb_min_falloff_curve = $hSndAMap.Curve[$oT6SndARecord.WetMinCurve]
+            if ($bContextSet -and (-not [string]::IsNullOrEmpty($oSndANewRecData.ContextType))) {
+                if ($oOgSndARec.context_value -in $hSndAValMap.Context.Value.($oOgSndARec.context_type)) {
+                    $oSndANewRecData.ContextValue = $oOgSndARec.context_value
+                } else {
+                    fnWinMsgBox `
+                        "Error" `
+                        "Unknown context_value found at line $($iSndAL)." `
+                        1 | Out-Null
+                    Exit
+                }
             } else {
-                fnWinMsgBox `
-                    "Error" `
-                    "Unknown WetMinCurve found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
-                    1 | Out-Null
-                Exit
+                $oSndANewRecData.ContextValue = $null
             }
-
-            if ($hSndAMap.Pan.ContainsKey($oT6SndARecord.Pan)) {
-                $oT5SndAData.pan = $hSndAMap.Pan[$oT6SndARecord.Pan]
-            } else {
-                fnWinMsgBox `
-                    "Error" `
-                    "Unknown Pan found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
-                    1 | Out-Null
-                Exit
-            }
-
-            if (-not $oT6SndARecord.ContextType) {
-                $oT5SndAData.context_type = $null
-            } elseif ($hSndAMap.Context.ContainsKey($oT6SndARecord.ContextType)) {
-                $oT5SndAData.context_type = $oT6SndARecord.ContextType
-            } else {
-                fnWinMsgBox `
-                    "Warning" `
-                    "Unknown ContextType found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
-                    2 | Out-Null
-            }
-
-            if ((-not $oT6SndARecord.ContextType) -and (-not $oT6SndARecord.ContextValue)) {
-                $oT5SndAData.context_value = $null
-            } elseif ($oT6SndARecord.ContextValue -in $hSndAMap.Context[$oT6SndARecord.ContextType]) {
-                $oT5SndAData.context_value = $oT6SndARecord.ContextValue
-            } else {
-                fnWinMsgBox `
-                    "Warning" `
-                    "Unknown ContextValue found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
-                    2 | Out-Null
-            }
-
-            if ($hSndAMap.Bus.ContainsKey($oT6SndARecord.Bus)) {
-                $oT5SndAData.bus = $hSndAMap.Bus[$oT6SndARecord.Bus]
-            } else {
-                fnWinMsgBox `
-                    "Warning" `
-                    "Unknown Bus found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
-                    2 | Out-Null
-            }
-
-            if ($hSndAMap.Duck.ContainsKey($oT6SndARecord.DuckGroup)) {
-                $oT5SndAData.snapshot = $hSndAMap.Duck[$oT6SndARecord.DuckGroup]
-            } else {
-                fnWinMsgBox `
-                    "Error" `
-                    "Unknown Duck found at line $iSndALineNum.`nIf you think it does exist in the game, report to Cowldwink immediately!" `
-                    1 | Out-Null
-                Exit
-            }
-
-            #  Populate CSV data array
-            # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-            $aSndAOData += ($oT5SndAData | ConvertTo-Csv -NoTypeInformation | Select-Object -Skip 1).Replace('"', '')
         }
 
-    } else {
-        Exit # Reserve for t5 to t6
+        foreach ($aSndAKeyMap in $aSndAKeyMaps) {
+            if ($hSndAValMap.($aSndAKeyMap[0]).ContainsKey($oOgSndARec.($aSndAKeyMap[0]))) {
+                $oSndANewRecData.($aSndAKeyMap[1]) = $hSndAValMap.($aSndAKeyMap[0]).($oOgSndARec.($aSndAKeyMap[0]))
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown $($aSndAKeyMap[0]) found at line $($iSndAL)." `
+                    1 | Out-Null
+                Exit
+            }
+        }
+
+        # TASK: FIX CURVES
+        foreach ($aSndACurveKeyMap in $aSndACurveKeyMaps) {
+            if ($hSndAValMap.Curve.ContainsKey($oOgSndARec.($aSndACurveKeyMap[0]))) {
+                $oSndANewRecData.($aSndACurveKeyMap[1]) = $oOgSndARec.($aSndACurveKeyMap[0])
+            } else {
+                fnWinMsgBox `
+                    "Error" `
+                    "Unknown $($oOgSndARec.($aSndACurveKeyMap[0])) found at line $($iSndAL)." `
+                    1 | Out-Null
+                Exit
+            }
+        }
+
+        #  Display current progress
+        # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+        $iProgressPercent = ($iSndAL / $iSndATotalL) * 100
+
+        Write-Progress `
+            -Activity "Progress:" `
+            -Status "$([math]::Round($iProgressPercent))% Complete" `
+            -PercentComplete $iProgressPercent
+
+        #  Populate CSV data array
+        # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+        $aSndAOutData += ($oSndANewRecData | ConvertTo-Csv -NoTypeInformation | Select-Object -Skip 1).Replace('"', '')
     }
 
     #  Output File
     # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-    #$aSndAOData += ""
-    $sSndAOFile = "$sODir\$(Split-Path $global:sSndAFile -Leaf)"
+    $sSndAOutFile = "$sOutDir\$(Split-Path $global:sSndAFile -Leaf)"
     [System.IO.File]::WriteAllLines(
-        "$sSndAOFile",
-        $aSndAOData,
-        $oUtf8Encoding
+        "$sSndAOutFile",
+        $aSndAOutData,
+        $oUtf8Enc
     )
 
     fnWinMsgBox `
         "Information" `
-        "Soundaliase successfully ported to $($global:sTargetGame)!`nOutput at: $sSndAOFile" `
+        "Soundaliase successfully ported to $($global:sTargetGame)!`nOutput at: $sSndAOutFile" `
         4 | Out-Null
+
 }
 
 #  Import the soundaliase file
@@ -352,83 +390,73 @@ function fnImportSndAFile {
 
     #  File Presence check
     # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-    if ($global:sSndAFile -eq "null" -or -not $global:sSndAFile) {
-
+    if ($global:sSndAFile -eq -1 -or -not $global:sSndAFile) {
         fnWinMsgBox `
             "Error" `
             "No soundaliase file selected." `
             1 | Out-Null
-
         Exit
     }
 
     #  Validating file
     # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-    $oSndA = [System.IO.File]::OpenText($global:sSndAFile)
+    $oFileEvt = [System.IO.File]::OpenText($global:sSndAFile)
 
     try {
 
         #  Header validation
         # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-        $sSndAHeader = $oSndA.ReadLine()
-        switch ($sSndAHeader) {
+        $sSndAHeaders = $oFileEvt.ReadLine()
+        switch ($sSndAHeaders) {
             $sT6SndAHeaders { $global:sTargetGame = "T5" }
-            $sT5SndAHeaders {
-                $global:sTargetGame = "T6"
-                fnWinMsgBox `
-                    "Error" `
-                    "T5 to T6 soundaliase conversion is not support yet.`n:P" `
-                    1 | Out-Null
-
-                Exit
-            }
+            $sT5SndAHeaders { $global:sTargetGame = "T6" }
             Default {
                 fnWinMsgBox `
                     "Error" `
                     "Invalid soundaliase file." `
                     1 | Out-Null
-
                 Exit
             }
         }
 
         #  Entry Format check
         # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-        $iLineNum = 1
-        while (($sSndALine = $oSndA.ReadLine()) -ne $null) {
-            $iSndALineCommaCount = $sSndALine.Length - $sSndALine.Replace(',', '').Length
-            if (($global:sTargetGame -eq "T5" -and $iSndALineCommaCount -ne 59) -or ($global:sTargetGame -eq "T6" -ne $iSndALineCommaCount -ne 73)) {
+        $iLine = 1
+        while (($sSndAL = $oFileEvt.ReadLine()) -ne $null) {
+            $iSndALineCommaCount = $sSndAL.Length - $sSndAL.Replace(',', '').Length
+            if (
+                ($global:sTargetGame -eq "T5" -and $iSndALineCommaCount -ne 59) -or
+                ($global:sTargetGame -eq "T6" -and $iSndALineCommaCount -ne 73)
+            ) {
                 fnWinMsgBox `
                     "Error" `
-                    "Invalid number of attributes in line $iLineNum." `
+                    "Invalid number of attributes in line $iLine." `
                     1 | Out-Null
 
                 Exit
             }
-            $iLineNum++
+            $iLine++
         }
 
         #  Entry Presence check
         # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
-        if ($iLineNum -eq 1) {
+        if ($iLine -eq 1) {
             fnWinMsgBox `
                 "Error" `
                 "No records in the soundaliase." `
                 1 | Out-Null
-
             Exit
         }
-    } finally { $oSndA.Dispose() }
+    } finally { $oFileEvt.Dispose() }
 }
 
 function fnInit {
-
-    if (-not (Test-Path $sODir)) {
+    if (-not (Test-Path $sOutDir)) {
         New-Item `
             -ItemType Directory `
-            -Path $sODir
+            -Path $sOutDir
     }
-
+    
     fnImportSndAFile
     fnPortSndAFile
 }
@@ -438,7 +466,3 @@ function fnInit {
 # ☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
 
 fnInit
-
-$env:PSModulePath = $aPSModuleOldPaths
-
-#Pause
