@@ -94,7 +94,7 @@
 - Compulsory field.
 - Boolean to make the sound to loop or not.
 ### randomize_type
-- Compulsory field.
+- Optional field.
 - Randomize certain aspect of the sound.
 ### probability
 - Compulsory field.
