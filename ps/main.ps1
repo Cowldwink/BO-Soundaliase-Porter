@@ -26,6 +26,7 @@ $sOutDir = "$sBaseDir\Output"
 #  Soundaliase Headers
 # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
 $sT5SndAHeaders = "name,file,template,loadspec,secondary,group,vol_min,vol_max,team_vol_mod,dist_min,dist_max,dist_reverb_max,volume_falloff_curve,reverb_falloff_curve,volume_min_falloff_curve,reverb_min_falloff_curve,limit_count,limit_type,entity_limit_count,entity_limit_type,pitch_min,pitch_max,team_pitch_mod,min_priority,max_priority,min_priority_threshold,max_priority_threshold,spatialized,type,loop,randomize_type,probability,start_delay,reverb_send,duck,pan,center_send,envelop_min,envelop_max,envelop_percentage,occlusion_level,occlusion_wet_dry,is_big,distance_lpf,move_type,move_time,real_delay,subtitle,mature,doppler,futz,context_type,context_value,compression,timescale,music,fade_in,fade_out,pc_format,pause,stop_on_death,bus,snapshot,voice_limit,file_xenon,file_size_xenon,file_ps3,file_size_ps3,file_pc,file_size_pc,file_wii,file_size_wii,source_csv,language"
+$sT5SndAAltHeaders = "name,file,template,loadspec,secondary,group,vol_min,vol_max,team_vol_mod,dist_min,dist_max,dist_reverb_max,volume_falloff_curve,reverb_falloff_curve,volume_min_falloff_curve,reverb_min_falloff_curve,limit_count,limit_type,entity_limit_count,entity_limit_type,pitch_min,pitch_max,team_pitch_mod,min_priority,max_priority,min_priority_threshold,max_priority_threshold,spatialized,type,loop,randomize_type,probability,start_delay,reverb_send,duck,pan,center_send,envelop_min,envelop_max,envelop_percentage,occlusion_level,occlusion_wet_dry,is_big,distance_lpf,move_type,move_time,real_delay,subtitle,mature,doppler,futz,context_type,context_value,compression,timescale,music,fade_in,fade_out,pc_format,pause,stop_on_death,bus,snapshot,voice_limit,file_xenon,file_size_xenon,file_ps3,file_size_ps3,file_pc,file_size_pc,source_csv,language"
 $sT6SndAHeaders = "Name,FileSource,Secondary,Storage,Bus,VolumeGroup,DuckGroup,Duck,ReverbSend,CenterSend,VolMin,VolMax,DistMin,DistMaxDry,DistMaxWet,DryMinCurve,DryMaxCurve,WetMinCurve,WetMaxCurve,LimitCount,EntityLimitCount,LimitType,EntityLimitType,PitchMin,PitchMax,PriorityMin,PriorityMax,PriorityThresholdMin,PriorityThresholdMax,PanType,Pan,Looping,RandomizeType,Probability,StartDelay,EnvelopMin,EnvelopMax,EnvelopPercent,OcclusionLevel,IsBig,DistanceLpf,FluxType,FluxTime,Subtitle,Doppler,ContextType,ContextValue,Timescale,IsMusic,IsCinematic,FadeIn,FadeOut,Pauseable,StopOnEntDeath,StopOnPlay,DopplerScale,FutzPatch,VoiceLimit,IgnoreMaxDist,NeverPlayTwice"
 
 #  Misc
@@ -423,8 +424,9 @@ function fnImportSndAFile {
         # ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
         $sSndAHeaders = $oFileEvt.ReadLine()
         switch ($sSndAHeaders) {
-            $sT6SndAHeaders { $global:sTargetGame = "T5" }
-            $sT5SndAHeaders { $global:sTargetGame = "T6" }
+            $sT6SndAHeaders { $global:sTargetGame = "T5"; $iReqCommaCount = 59 }
+            $sT5SndAHeaders { $global:sTargetGame = "T6"; $iReqCommaCount = 73 }
+            $sT5SndAAltHeaders { $global:sTargetGame = "T6"; $iReqCommaCount = 71 }
             Default {
                 fnWinMsgBox `
                     "Error" `
@@ -439,13 +441,10 @@ function fnImportSndAFile {
         $iLine = 1
         while (($sSndAL = $oFileEvt.ReadLine()) -ne $null) {
             $iSndALineCommaCount = $sSndAL.Length - $sSndAL.Replace(',', '').Length
-            if (
-                ($global:sTargetGame -eq "T5" -and $iSndALineCommaCount -ne 59) -or
-                ($global:sTargetGame -eq "T6" -and $iSndALineCommaCount -ne 73)
-            ) {
+            if ($iSndALineCommaCount -ne $iReqCommaCount) {
                 fnWinMsgBox `
                     "Error" `
-                    "Invalid number of attributes in line $iLine." `
+                    "Invalid number of attributes in line $iLine. Comma count is $iSndALineCommaCount" `
                     1 | Out-Null
 
                 Exit
