@@ -99,6 +99,7 @@
         center_player = "center_player"
         right_player = "right_player"
         random_player = "random"
+        random = "random"
         left_shot = "left_shot"
         center_shot = "center_shot"
         right_shot = "right_shot"
