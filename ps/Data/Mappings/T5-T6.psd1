@@ -180,7 +180,7 @@
         physics = "snp_destructible"
         ui = "snp_menu"
         vehicle_mp = "snp_vehicle"
-        event = "snp_movie"
+        event = "snp_hdrfx"
         veh_interior = "snp_vehicle_interior"
         effects = "snp_hdrfx"
         zmb_desert_wind = "snp_ambience"
