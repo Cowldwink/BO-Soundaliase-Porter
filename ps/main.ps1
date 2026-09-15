@@ -137,7 +137,7 @@ function fnPortSndAFile {
                 "real_delay" = "no"
                 "subtitle" = $oOgSndARec.Subtitle
                 "mature" = "both"
-                "doppler" = $oOgSndARec.Doppler
+                "doppler" = "no"
                 "futz" = "INSERT"
                 "context_type" = $null
                 "context_value" = $null
@@ -219,6 +219,10 @@ function fnPortSndAFile {
                 $oSndANewRecData.context_value = $null
             }
 
+            if ($oOgSndARec.DopplerScale -eq 0) {
+                $oSndANewRecData.doppler = no
+            } else { $oSndANewRecData.doppler = yes }
+
         } else {
             $oSndANewRecData = [PSCustomObject][ordered]@{
                 Name                   = $oOgSndARec.name
@@ -276,7 +280,7 @@ function fnPortSndAFile {
                 Pauseable              = $oOgSndARec.pause
                 StopOnEntDeath         = $oOgSndARec.stop_on_death
                 StopOnPlay             = $null
-                DopplerScale           = $oOgSndARec.doppler
+                DopplerScale           = 0
                 FutzPatch              = "INSERT"
                 VoiceLimit             = $oOgSndARec.voice_limit
                 IgnoreMaxDist          = "no"
@@ -338,6 +342,10 @@ function fnPortSndAFile {
             } else {
                 $oSndANewRecData.ContextValue = $null
             }
+
+            if ($oOgSndARec.doppler -eq "no") {
+                $oSndANewRecData.DopplerScale = 0
+            } else { $oSndANewRecData.DopplerScale = 1 }
         }
 
         foreach ($aSndAKeyMap in $aSndAKeyMaps) {
