@@ -354,7 +354,7 @@ function fnPortSndAFile {
 
         foreach ($aSndACurveKeyMap in $aSndACurveKeyMaps) {
             if ($hSndAValMap.Curve.ContainsKey($oOgSndARec.($aSndACurveKeyMap[0]))) {
-                $oSndANewRecData.($aSndACurveKeyMap[1]) = $oOgSndARec.($aSndACurveKeyMap[0])
+                $oSndANewRecData.($aSndACurveKeyMap[1]) = $hSndAValMap.Curve($oOgSndARec.($aSndACurveKeyMap[0]))
             } else {
                 fnWinMsgBox `
                     "Error" `
