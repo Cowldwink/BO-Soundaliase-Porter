@@ -137,7 +137,7 @@ function fnPortSndAFile {
                 "real_delay" = "no"
                 "subtitle" = $oOgSndARec.Subtitle
                 "mature" = "both"
-                "doppler" = "no"
+                "doppler" = $oOgSndARec.Doppler
                 "futz" = "INSERT"
                 "context_type" = $null
                 "context_value" = $null
@@ -218,11 +218,6 @@ function fnPortSndAFile {
             } else {
                 $oSndANewRecData.context_value = $null
             }
-
-            if ($oOgSndARec.DopplerScale -eq 0) {
-                $oSndANewRecData.doppler = no
-            } else { $oSndANewRecData.doppler = yes }
-
         } else {
             $oSndANewRecData = [PSCustomObject][ordered]@{
                 Name                   = $oOgSndARec.name
@@ -342,10 +337,6 @@ function fnPortSndAFile {
             } else {
                 $oSndANewRecData.ContextValue = $null
             }
-
-            if ($oOgSndARec.doppler -eq "no") {
-                $oSndANewRecData.DopplerScale = 0
-            } else { $oSndANewRecData.DopplerScale = 1 }
         }
 
         foreach ($aSndAKeyMap in $aSndAKeyMaps) {
